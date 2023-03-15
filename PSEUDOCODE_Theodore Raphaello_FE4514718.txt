@@ -1,0 +1,26 @@
+
+
+
+PROGRAM HospitalAdmission
+
+START
+READ INPUT "Personal Data"
+CHECK PersonalDataOnDatabase
+WRITE "Data Exist" = True
+IF "Data Exist" = True
+	PRINT "DATA REGISTERED"
+ELSE
+	PRINT "DATA NOT FOUND, PLEASE FILL REGISTRATION FORM"
+	WRITE "Data Verified" = FALSE
+	WHILE "Data Verified" == FALSE
+		READ INPUT "Registration Form"
+		READ INPUT PersonalDataChecking
+		VERIFY "Registration Form"
+		IF "Registration Form" = VERIFIED
+			PRINT "YOUR DATA HAS BEEN REGISTERED"
+			SET "Data Verified" = True
+		ELSE
+			PRINT "PLEASE FILL YOUR REGISTRATION FORM PROPERLY"
+PRINT "VISITOR HISTORY"
+END
+	
